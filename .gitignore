@@ -1,2 +1,6 @@
 .DS_Store
 Carthage/*
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+xcuserdata/
