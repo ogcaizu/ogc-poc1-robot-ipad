@@ -15,6 +15,7 @@
 		0E7C665921744873003B94F7 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7C665821744873003B94F7 /* CocoaAsyncSocket.framework */; };
 		0E7C665B21744882003B94F7 /* SwiftyTimer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7C665A21744882003B94F7 /* SwiftyTimer.framework */; };
 		0E7C665D21744890003B94F7 /* CocoaMQTT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E7C665C21744890003B94F7 /* CocoaMQTT.framework */; };
+		0E7C666021744CBF003B94F7 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0E7C665F21744CBF003B94F7 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		0E7C665821744873003B94F7 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 		0E7C665A21744882003B94F7 /* SwiftyTimer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyTimer.framework; path = Carthage/Build/iOS/SwiftyTimer.framework; sourceTree = "<group>"; };
 		0E7C665C21744890003B94F7 /* CocoaMQTT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaMQTT.framework; path = Carthage/Build/iOS/CocoaMQTT.framework; sourceTree = "<group>"; };
+		0E7C665F21744CBF003B94F7 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 			children = (
 				0E7C66452174469F003B94F7 /* AppDelegate.swift */,
 				0E7C66472174469F003B94F7 /* ViewController.swift */,
+				0E7C665F21744CBF003B94F7 /* Settings.bundle */,
 				0E7C66492174469F003B94F7 /* Main.storyboard */,
 				0E7C664C2174469F003B94F7 /* Assets.xcassets */,
 				0E7C664E2174469F003B94F7 /* LaunchScreen.storyboard */,
@@ -144,6 +147,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E7C666021744CBF003B94F7 /* Settings.bundle in Resources */,
 				0E7C66502174469F003B94F7 /* LaunchScreen.storyboard in Resources */,
 				0E7C664D2174469F003B94F7 /* Assets.xcassets in Resources */,
 				0E7C664B2174469F003B94F7 /* Main.storyboard in Resources */,
