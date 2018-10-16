@@ -8,6 +8,7 @@
 
 import UIKit
 import CocoaMQTT
+import AVFoundation
 
 class Messages {
     static let connectionError = "接続失敗"
@@ -32,7 +33,7 @@ enum State: String {
 
 class ViewController: UIViewController {
     var mqtt: CocoaMQTT?
-    let messages = Messages()
+    let talker = AVSpeechSynthesizer()
     
     let re = try! Regex("([\\w_-]+)@([\\w-_]+)\\|([\\w-_]+)")
 
@@ -56,6 +57,12 @@ class ViewController: UIViewController {
     }
     var cmdExeTopic: String {
         return "\(UserDefaults.standard.string(forKey: "basetopic") ?? "")/cmdexe"
+    }
+    var guidingTalk: String {
+        return UserDefaults.standard.string(forKey: "guiding") ?? "目的地までご案内いたします。私に付いてきてください。"
+    }
+    var suspendingTalk: String {
+        return UserDefaults.standard.string(forKey: "suspending") ?? "目的地に到着しました。押しボタンを押して、おはいりください。"
     }
     
     @IBOutlet weak var label: UILabel!
@@ -117,9 +124,13 @@ extension ViewController: CocoaMQTTDelegate {
                                 result = "executed Waiting"
                             case .Guiding:
                                 label.text = Messages.guiding
+                                let utterance = AVSpeechUtterance(string:guidingTalk)
+                                talker.speak(utterance)
                                 result = "executed Guiding"
                             case .Suspending:
                                 label.text = Messages.suspending
+                                let utterance = AVSpeechUtterance(string:suspendingTalk)
+                                talker.speak(utterance)
                                 result = "executed Suspending"
                             case .Returning:
                                 label.text = Messages.returning

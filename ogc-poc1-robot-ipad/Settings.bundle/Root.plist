@@ -150,6 +150,32 @@
 				<string>2F</string>
 			</array>
 		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+			<key>Title</key>
+			<string>Talk</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Guiding</string>
+			<key>Key</key>
+			<string>guiding</string>
+			<key>DefaultValue</key>
+			<string>目的地までご案内いたします。私に付いてきてください。</string>
+		</dict>
+		<dict>
+			<key>Type</key>
+			<string>PSTextFieldSpecifier</string>
+			<key>Title</key>
+			<string>Suspending</string>
+			<key>Key</key>
+			<string>suspending</string>
+			<key>DefaultValue</key>
+			<string>目的地に到着しました。押しボタンを押して、おはいりください。</string>
+		</dict>
 	</array>
 </dict>
 </plist>
